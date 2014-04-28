@@ -1,5 +1,4 @@
 package com.example.boilerapp;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -31,7 +30,7 @@ public class LoginSignupActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login_signup);
 		Log.i(TAG, "onCreate");
-		
+
 		
 		
 		//get fields from xml
@@ -75,7 +74,9 @@ public class LoginSignupActivity extends Activity{
 				
 				//force user to fill fields
 				if(usernameStr.equals("") && passwordStr.equals("")){
-					Toast.makeText(getApplicationContext(), "fill the shit", Toast.LENGTH_LONG).show();
+					Toast.makeText(getApplicationContext(), "Dont Bubble with me.\n" +
+							"You won't like me when I Bubble.\n" +
+							"fill the shit", Toast.LENGTH_LONG).show();
 				}else{
 					//save user info to Parse
 					ParseUser user = new ParseUser();
@@ -85,11 +86,11 @@ public class LoginSignupActivity extends Activity{
 						public void done(ParseException e){
 							if(e == null){
 								// Show a simple Toast message upon successful registration
-                                Toast.makeText(getApplicationContext(),
+								Toast.makeText(getApplicationContext(),
                                         "Successfully Signed up, please log in.",
                                         Toast.LENGTH_LONG).show();
                             } else {
-                                Toast.makeText(getApplicationContext(),
+                            	Toast.makeText(getApplicationContext(),
                                         "Sign up Error", Toast.LENGTH_LONG)
                                         .show();
                             }

@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/LinearLayout2"
     android:layout_width="match_parent"
@@ -11,23 +11,20 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".LoginSignupActivity" >
 
-    <EditText
-        android:id="@+id/email"
+    <ImageView
+        android:id="@+id/imageView1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/prompt_email"
-        android:inputType="textEmailAddress"
-        android:maxLines="1"
-        android:singleLine="true" >
-
-        <requestFocus />
-    </EditText>
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/bubble_splash" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/email"
+        android:layout_marginTop="56dp"
         android:ems="10"
         android:hint="@string/prompt_password"
         android:imeActionId="@+id/login"
@@ -37,23 +34,43 @@
         android:maxLines="1"
         android:singleLine="true" />
 
-    <Button
-        android:id="@+id/login_button"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="buttonClick"
-        android:text="@string/login_button_hint" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/create_account" />
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_marginTop="47dp"
+        android:ems="10"
+        android:hint="@string/prompt_email"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:singleLine="true" />
 
     <Button
         android:id="@+id/new_account_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true"
         android:text="@string/new_account_button_hint" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:textColor="@color/blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/new_account_button"
+        android:layout_centerHorizontal="true"
+        android:text="@string/create_account" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:onClick="buttonClick"
+        android:text="@string/login_button_hint" />
+
+</RelativeLayout>

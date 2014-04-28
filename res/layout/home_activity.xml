@@ -1,69 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:padding="5dp" >
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ListView1"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="6dip" >
 
-    <EditText
-        android:id="@+id/user_nameIn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/name"
-        android:inputType="text" >
-    </EditText>
-
-    <EditText
-        android:id="@+id/user_passIn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/comment"
-        android:inputType="text" />
-
-    <EditText
-        android:id="@+id/user_emailIn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/other"
-        android:inputType="text" />
-
-    <Button
-        android:id="@+id/login_button"
+ <!--    <ImageView
+        android:id="@+id/icon"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/addcomment"
-        android:onClick="addComment" />
+        android:layout_height="fill_parent"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_launcher" />
 
     <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/blank"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:id="@+id/secondLine"
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Description"
+        android:textSize="12sp" />
 
     <TextView
-        android:id="@+id/comment"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/blank"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:gravity="center_vertical"
+        android:text="Example application"
+        android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/other"
+    <TabWidget
+        android:id="@android:id/tabs"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/blank"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_height="wrap_content" >
+    </TabWidget> -->
 
-</LinearLayout>
+</ListView>

@@ -1,57 +1,38 @@
 package com.example.boilerapp;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
-
+import android.view.Gravity;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 public class HomeActivity extends Activity {
-	
-	TextView nameOut; /*global*/
+	ListAdapter homeListAdapter;
+	ListView homeList;
+	Toast toast;
 	
 	@Override
 	public void onCreate (Bundle savedInstanceState)
 	{
-		
-		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.home_activity);
+		//setup toast for debugging
+		toast = new Toast(getApplicationContext());
+		toast.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.TOP, 0, 0);
+		toast.setDuration(Toast.LENGTH_LONG);
 		
-		Intent intent = getIntent();
+		RetrieveContent();
 		
-		String text = intent.getStringExtra("screenText");
+		//homelist is dependent on listadapter being instanciated first
 		
-		Log.i("New Activity", "Intent Text = " +text);
-		if(text!=null)
-		{
-		nameOut = (TextView) findViewById (R.id.name);
-		nameOut.setText(text);
-		}
-		
+		//configure adapter for loading content to home listview
+		//custom homelistview automatically grabs the listadapter in this context
+		homeList = new HomeListView(getApplicationContext());
 	}
 	
-	public void addComment (View v)
-	{
-		String name,comment,other;
-		
-		EditText nameIn = (EditText) findViewById (R.id.user_nameIn);
-		EditText commentIn = (EditText) findViewById (R.id.user_passIn);
-		EditText otherIn = (EditText) findViewById (R.id.user_emailIn);
-		
-		name = nameIn.getText().toString();
-		comment = commentIn.getText().toString();
-		other = otherIn.getText().toString();
-		
-		TextView commentOut = (TextView) findViewById (R.id.comment);
-		TextView otherOut = (TextView) findViewById (R.id.other);
-		
-		nameOut.setText(name);
-		commentOut.setText(comment);
-		otherOut.setText(other);
-		
+	public void RetrieveContent(){
+		Toast.makeText(getApplicationContext(), "retrieving content from cloud made entirely of bubbles", Toast.LENGTH_LONG).show();
 	}
+	
 
 }
