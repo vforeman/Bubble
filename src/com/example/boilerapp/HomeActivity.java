@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class NewActivity extends Activity {
+public class HomeActivity extends Activity {
 	
 	TextView nameOut; /*global*/
 	
@@ -18,7 +18,7 @@ public class NewActivity extends Activity {
 		
 		
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.new_activity);
+		setContentView(R.layout.home_activity);
 		
 		Intent intent = getIntent();
 		

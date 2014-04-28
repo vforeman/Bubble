@@ -16,6 +16,9 @@
     <string name="user_name_hint">username</string>
     <string name="user_pass_hint">password</string>
     <string name="user_email_hint">email</string>
+    <string name="create_account">Not Bubblin\' Yet?</string>
+    <string name="login_button_hint">login</string>
+    <string name="new_account_button_hint">new account</string>
    
 
 </resources>
