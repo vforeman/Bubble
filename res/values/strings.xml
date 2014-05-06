@@ -19,6 +19,6 @@
     <string name="create_account">Not Bubblin\' Yet?</string>
     <string name="login_button_hint">login</string>
     <string name="new_account_button_hint">new account</string>
-    <string name="title_activity_share">Share Activity</string>   
+    <string name="title_activity_share">Add to Bubble</string>   
 
 </resources>

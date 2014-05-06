@@ -25,8 +25,8 @@ public class ShareActivity extends Activity {
 		TextView text = (TextView) findViewById(R.id.textView);
 		//Getting the action of the intent
 		String action = intent.getAction();
-		if (!action.equals(Intent.ACTION_VIEW)){
-			throw new RuntimeException("Sommin Wrong");
+		if (!action.equals(Intent.ACTION_SEND)){
+			throw new RuntimeException("Error Wrong Action");
 		}
 		//To Get Data
 		Uri data = intent.getData();

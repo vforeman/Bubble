@@ -43,9 +43,10 @@
             android:label="@string/title_activity_share"
             android:theme="@android:style/Theme.Black.NoTitleBar" >
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="http"/>
+                 <data android:mimeType="*/*" />
+                <!-- <data android:scheme="http"/> -->
             </intent-filter>
         </activity>
     </application>
