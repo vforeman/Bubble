@@ -22,9 +22,23 @@ public class ShareActivity extends Activity {
 		
 		setContentView(R.layout.share_activity);
 		Intent intent = getIntent();
+		
+		//convert intent to string uri representation
+		String uriString = intent.toUri(0);
+				
+		//Parsing the uri string
+		
+		Uri uri = Uri.parse(uriString);
+			
 		TextView text = (TextView) findViewById(R.id.textView);
 		//Getting the action of the intent
 		String action = intent.getAction();
+		
+		//test if uri shows up
+		text.append(uriString);
+		text.append("===break===");
+		
+		
 		if (!action.equals(Intent.ACTION_SEND)){
 			throw new RuntimeException("Error Wrong Action");
 		}
