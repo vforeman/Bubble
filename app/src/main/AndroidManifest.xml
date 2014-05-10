@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bubble"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- SPLASHSCREEN -->
+        <activity
+            android:name="com.bubble.SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- LOGIN OR SIGNUP -->
+        <activity
+            android:name="com.bubble.LoginSignupActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <!-- TAG -->
+        <activity
+            android:name="com.bubble.Tag"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- ADDTAG -->
+        <activity
+            android:name="com.bubble.AddExistingTag"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- CREATE TAG -->
+        <activity
+            android:name="com.bubble.CreateTag"
+            android:label="@string/app_name" >
+        </activity>
+
+        <!-- HOME PAGE -->
+        <activity android:name="com.bubble.HomeActivity" >
+        </activity>
+
+        <!-- SHARE -->
+        <activity
+            android:name="com.bubble.ShareActivity"
+            android:label="@string/title_activity_share"
+            android:parentActivityName="com.bubble.HomeActivity"
+            android:theme="@style/Theme.AppCompat.Light" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bubble.FavoritesActivity"
+            android:label="@string/title_activity_favorites" >
+        </activity>
+    </application>
+
+</manifest>

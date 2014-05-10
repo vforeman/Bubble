@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+        xmlns:com.bubble = "http://schemas.android.com/apk/res-auto"
+    <item
+        android:id="@+id/action_favorite"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom|withText"
+        android:icon="@drawable/fav_icon"
+        android:title="@string/action_favorite"/>
+    <item
+        android:id="@+id/action_tag"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom|withText"
+        android:icon="@drawable/tag_icon"
+        android:title="@string/action_tag"/>
+    <item
+        android:id="@+id/action_comment"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom|withText"
+        android:icon="@drawable/comment_icon"
+        android:title="@string/action_comment"/>
+
+
+</menu>
